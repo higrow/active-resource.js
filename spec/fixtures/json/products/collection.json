@@ -51,6 +51,9 @@
       }
     }
   ],
+  "meta": {
+    "totalPages": 12
+  },
   "included": [
     {
       "id": 1,

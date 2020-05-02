@@ -20,6 +20,12 @@ ActiveResource.CollectionResponse = class ActiveResource::CollectionResponse ext
 
     @__links
 
+  meta: (data = {}) ->
+    if !_.isEmpty(data) || !@__meta?
+      @__meta = data
+
+    @__meta
+
   # Indicates whether or not a prev link was included in the response
   #
   # @return [Boolean] whether or not the response has a previous page that can be loaded

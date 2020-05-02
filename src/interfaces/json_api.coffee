@@ -630,6 +630,7 @@ ActiveResource.Interfaces.JsonApi = class ActiveResource::Interfaces::JsonApi ex
           object
 
       built.links(response.links)
+      built.meta(response.meta)
 
       if _.isArray(response.data) then built else built.first()
     , (errors) ->

@@ -114,6 +114,14 @@ describe 'ActiveResource', ->
             @promise2.then =>
               expect(@collection.last().links()['self']).toBeDefined()
 
+          it 'defines a "meta" method', ->
+            @promise2.then =>
+              expect(@collection.meta()).toBeDefined()
+
+          it 'returns defined meta information', ->
+            @promise2.then =>
+              expect(@collection.meta()['totalPages']).toEqual(12)
+
       describe 'getting a resource', ->
         beforeEach ->
           @interface
